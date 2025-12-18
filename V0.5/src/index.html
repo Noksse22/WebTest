@@ -1,0 +1,121 @@
+<!DOCTYPE html> 
+<html lang="fr"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Accueil — L&J Web</title> 
+        <link rel="icon" type="image/png" href="../Logo/L&J_WEB_Logo.png"/> 
+        <link rel="stylesheet" href="../css/style.css"> 
+        <link rel="stylesheet" href="../css/responsive.css">
+        <meta name="author" content="L&J Web">
+        <meta name="contact" content="support@ljweb.com">
+        <meta property="og:site_name" content="L&J Web">
+        <meta name="theme-color" content="#0079a8">
+    </head> 
+    <body> 
+        <header id="en-tete"> 
+            <!-- navbar -->
+            <img src="../Logo/L&J_WEB_Logo.png" id="logo" class="header-logo" alt="L&J logo"> 
+            <a href="#navbar" class="menu-toggle" aria-label="Ouvrir le menu">☰ Menu</a>
+            <nav id="navbar"> 
+                <a href="index.html">Accueil</a> 
+                <a href="../html/services.html">Services</a> 
+                <a href="../html/paiement.html">Modes de paiement</a> 
+                <a href="../html/contact.html">Contact</a> 
+            </nav> 
+        </header>
+
+        <!-- bvn -->
+        <section id="bvn"> 
+            <h1>Bienvenue chez L&J Web</h1> 
+            <p>Votre partenaire de confiance pour des solutions web innovantes.</p> 
+            <p id="pub">L&J Web - Création et refonte de sites web</p>
+
+            <span class="dot d1"></span>
+            <span class="dot d2"></span>
+            <span class="dot d3"></span>
+            <span class="dot d4"></span>
+        </section> 
+
+        <main> 
+            <section id="Expliactions"> 
+
+                <div class="Expliaction premier"> 
+                    <h2>Qui somme nous ?</h2> 
+                    <div class="content">
+                        <p>
+                            Bienvenue sur <strong>L&J Web</strong>, votre partenaire pour la création et la refonte de sites web. 
+                            Nous concevons des sites sur-mesure, adaptés à vos besoins et à vos objectifs, pour vous permettre de briller en ligne.
+                        </p>
+                        <p>
+                            Notre objectif est simple : créer des sites web <strong>à votre image</strong>, que ce soit pour un projet personnel, professionnel ou entrepreneurial.
+                            Chaque site est conçu <strong>selon vos demandes</strong>, avec un suivi personnalisé à chaque étape du projet.
+                        </p>
+                        <p>
+                            Pour vous accompagner pleinement, nous mettons également en place un <strong>support dédié</strong>  pour répondre à toutes vos questions et demandes,
+                            afin que votre expérience soit fluide et sans stress.
+                        </p>
+                    </div>
+                </div> 
+
+                <div class="blocs-bas">
+                    <div class="Expliaction"> 
+                        <h2>Développement</h2> 
+                        <div class="content">
+                            <p>responsive, SEO, performant, accessible, optimisation performances, images optimisées, déploiement, maintenance</p>
+                        </div>
+                    </div> 
+
+                    <div class="Expliaction"> 
+                        <h2>Support 12/6</h2> 
+                        <div class="content">
+                            <p>support par mail, 6j/7 (8h-20h), sauvegardes régulières, surveillance, restauration, suivi</p>
+                        </div>
+                    </div> 
+                </div>
+
+            </section>
+
+            <!-- cookie banner (index only) -->
+            <div id="cookie-banner" role="dialog" aria-live="polite" aria-label="Bannière cookies" style="display:none">
+                <p>Nous utilisons des cookies pour améliorer votre expérience et mémoriser votre choix. En acceptant, ce choix sera enregistré localement.</p>
+                <div class="actions">
+                    <button id="cookie-accept" class="accept">Accepter</button>
+                    <button id="cookie-close" class="close">Fermer</button>
+                </div>
+            </div>
+
+            <script>
+            (function(){
+                document.addEventListener('DOMContentLoaded', function(){
+                    var key = 'lj_cookie_accepted';
+                    try {
+                        if (localStorage.getItem(key) === '1') return; // déjà accepté -> rien à faire
+                    } catch(e) { /* storage bloqué */ }
+
+                    var banner = document.getElementById('cookie-banner');
+                    if (!banner) return;
+                    banner.style.display = 'flex';
+
+                    var accept = document.getElementById('cookie-accept');
+                    var close = document.getElementById('cookie-close');
+
+                    accept && accept.addEventListener('click', function(){
+                        try { localStorage.setItem(key, '1'); } catch(e){}
+                        banner.style.display = 'none';
+                    });
+
+                    close && close.addEventListener('click', function(){
+                        banner.style.display = 'none';
+                    });
+                });
+            })();
+            </script>
+
+            <footer id="cp">
+                <p>&copy; 2025 L&J Web. Tous droits réservés.</p>
+                <p>L&J Web - Création et refonte de sites web</p>
+            </footer>
+        </main>
+    </body> 
+</html>
